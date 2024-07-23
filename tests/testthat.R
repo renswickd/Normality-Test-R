@@ -7,6 +7,6 @@
 # * https://testthat.r-lib.org/articles/special-files.html
 
 library(testthat)
-library(main-code-dev)
+library(normality)
 
-test_check("main-code-dev")
+test_check("normality")
