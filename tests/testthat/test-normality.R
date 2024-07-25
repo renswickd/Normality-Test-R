@@ -20,7 +20,7 @@ test_that("normality function works", {
   expect_error(normality(NA), "Input need to be a non NA value")
   expect_error(normality(Inf), "Input need to be a non Inf value")
 
-  expect_error(normality(array(c(1,2,3,4),dim = c(2,2))), "Input must be an 1-D vector/array")
+  expect_error(normality(array(c(1,2,3,4),dim = c(2,2))), "Input must be an vector/1-D array")
   expect_error(normality(c(7,7,7,7,7)), "Input must not be identical")
   expect_error(normality(c("incorrect input format")))
   expect_error(normality(c(1,99)),"Input must have atleast three or more non NA values")

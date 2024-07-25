@@ -8,11 +8,12 @@ normality <- function(data, plot=FALSE) {
 
   #Exceptions: Detect invalid data formats / Invalid Dimensions / Data catch
   stopifnot(is.numeric(data))
-  if (length(dim(data)) > 1) stop("Input must be an 1-D vector/array")
+  if (length(dim(data)) > 1) stop("Input must be an vector/1-D array")
   if (length(unique(data)) == 1) stop("Input must not be identical")
-  if (length(data) <=2 ) stop("Input must have atleast three or more non NA values")
 
   n <- length(data)
+  if (n <=2 ) stop("Input must have atleast three or more non NA values")
+
   # Warnings: NA values
   if (any(is.na(data))) {
     warning("DATA has NA values: W-test statistics value is derived ignoring NAs")
@@ -31,7 +32,9 @@ normality <- function(data, plot=FALSE) {
   # result <- shapiro.test(data)
 
   sorted_data <- sort(data)
-  a_value <- qnorm((1:n - 3/8) / (n + 1/4))
+  a_numerator = (1:n - 3/8)
+  a_denominator = (n + 1/4)
+  a_value <- qnorm(a_numerator / a_denominator)
   W <- sum(a_value * sorted_data)^2 / sum((sorted_data - mean(data))^2)
   return(W)
 
