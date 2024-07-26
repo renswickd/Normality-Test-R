@@ -1,14 +1,17 @@
 ---
 name: "Renswick Delvar, 300656093"
 title: "DATA501-Assignment1"
-output: PDF_document
-date: "2024-07-25"
+output: pdf_document
+date: "2024-07-26"
 ---
 
 ## Program Description
 The objective of the project is to develop a function to perform Shapiro-Wilk test and derive W statistic. The R code for the function and code descriptions were given below.
 
 ### 1.) Implementation of git, GitHub and commit history 
+*[GitHub Repository: here](https://github.com/renswickd/Normality-Test-R#:~:text=Settings-,Normality%2DTest%2DR,-Public)*
+
+
 * The project (package) is developed in a local repository and connected to a GitHub repository named *Normality-Test-R* [click here to the repository](https://github.com/renswickd/Normality-Test-R#:~:text=Settings-,Normality%2DTest%2DR,-Public) The repository has 3 branches
   + main - the initial implementation (success scenario) of the code is committed and pushed to the main branch
   + unit-testing - this branch is created from the main branch and the unit test cases for the initial development is added to the test directory
@@ -125,12 +128,3 @@ normality(c("random","input","vector","in", "wrong","format"))
 # Exception for Invalid dimension
 normality(array(c(1,2,3,4),dim=c(2,2)))
 ```
-
-
-
-
-
-    
-    
-    
-    
